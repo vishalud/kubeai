@@ -1,0 +1,36 @@
+# kubeai
+
+A Python project for natural language-driven Kubernetes operations.
+
+## Setup Instructions
+
+1. **Clone the repository and enter the project directory:**
+   ```bash
+   git clone <repo-url>
+   cd kubeai
+   ```
+
+2. **Create and activate a Python virtual environment:**
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Directory Structure:**
+   - `src/` – Main application code
+   - `tests/` – Unit tests
+   - `docs/` – Documentation
+
+5. **Verify installation:**
+   ```bash
+   python -c "import pydantic; import kubernetes; import google.generativeai"
+   ```
+
+## Notes
+- Ensure you are using Python 3.8 or newer.
+- The `.venv/` directory is excluded from version control via `.gitignore`. 
