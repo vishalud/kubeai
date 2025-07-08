@@ -1,6 +1,6 @@
 import pytest
 from pydantic import ValidationError
-from models import EntityModel, IntentModel, PodStatusModel, ConversationState
+from src.models import EntityModel, IntentModel, PodStatusModel, ConversationState, PodImageModel
 
 # EntityModel tests
 def test_entity_model_valid():
@@ -25,9 +25,16 @@ def test_intent_model_invalid():
 
 # PodStatusModel tests
 def test_pod_status_model_valid():
-    m = PodStatusModel(name="nginx", namespace="default", status="Running", restarts=1)
+    m = PodStatusModel(
+        name="nginx",
+        namespace="default",
+        status="Running",
+        restarts=1,
+        containers=[{"name": "nginx", "image": "nginx:1.14.2"}]
+    )
     assert m.name == "nginx"
     assert m.status == "Running"
+    assert m.containers[0]["image"] == "nginx:1.14.2"
 
 def test_pod_status_model_invalid():
     with pytest.raises(ValidationError):
@@ -41,4 +48,19 @@ def test_conversation_state_valid():
 
 def test_conversation_state_invalid():
     with pytest.raises(ValidationError):
-        ConversationState(session_id=123, history="notalist") 
+        ConversationState(session_id=123, history="notalist")
+
+# PodImageModel tests
+def test_pod_image_model_valid():
+    m = PodImageModel(
+        name="nginx",
+        namespace="default",
+        containers=[{"name": "nginx", "image": "nginx:1.14.2"}]
+    )
+    assert m.name == "nginx"
+    assert m.namespace == "default"
+    assert m.containers[0]["image"] == "nginx:1.14.2"
+
+def test_pod_image_model_invalid():
+    with pytest.raises(ValidationError):
+        PodImageModel(name=123, namespace=None, containers="notalist") 

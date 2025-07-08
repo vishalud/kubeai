@@ -2,3 +2,5 @@ pydantic
 pydantic-ai
 google-generativeai
 kubernetes
+pytest
+pytest-cov

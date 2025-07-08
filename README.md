@@ -1,5 +1,7 @@
 # kubeai
 
+[![codecov](https://app.codecov.io/gh/vishalud/kubeai/branch/main/graph/badge.svg)](https://codecov.io/gh/vishalud/kubeai)
+
 A Python project for natural language-driven Kubernetes operations.
 
 ## Setup Instructions
@@ -38,6 +40,37 @@ See kubeai in action:
 ![kubeai demo](docs/t-rec_1.gif)
 
 This demo shows the CLI responding to natural language Kubernetes queries, including listing pods and summarizing their status using Gemini-powered NLP.
+
+## Running Tests
+
+You can run the test suite using the provided Makefile.
+
+- **Run all tests (quiet):**
+  ```bash
+  make test
+  ```
+
+- **Run all tests (verbose):**
+  ```bash
+  make test-verbose
+  ```
+
+- **Run a specific test file:**
+  ```bash
+  make test-file FILE=tests/test_k8s_client.py
+  ```
+
+- **Show all available Makefile targets:**
+  ```bash
+  make help
+  ```
+
+- **Run coverage and see a local report:**
+  ```bash
+  make coverage
+  ```
+
+Test coverage is also uploaded to [Codecov](https://codecov.io/gh/<your-username>/<your-repo>) via GitHub Actions. The badge above will update automatically after each push to main.
 
 ## Notes
 - Ensure you are using Python 3.8 or newer.

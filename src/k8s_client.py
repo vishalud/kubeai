@@ -1,6 +1,6 @@
 from kubernetes import client, config
 from kubernetes.config.config_exception import ConfigException
-from .models import IntentModel, EntityModel, PodStatusModel
+from src.models import IntentModel, EntityModel, PodStatusModel, PodImageModel
 from pydantic import BaseModel
 from kubernetes.client.rest import ApiException
 from typing import List, Type
@@ -82,15 +82,51 @@ def _handle_get_pod_status(entities: List[EntityModel]) -> list:
     result = []
     for item in pod_list.items:
         restarts = 0
+        containers = []
         if hasattr(item.status, "container_statuses") and item.status.container_statuses:
             restarts = sum(cs.restart_count for cs in item.status.container_statuses if hasattr(cs, "restart_count"))
+            # Extract container information
+            for container in item.spec.containers:
+                containers.append({
+                    "name": container.name,
+                    "image": container.image
+                })
         result.append(PodStatusModel(
             name=item.metadata.name,
             namespace=item.metadata.namespace,
             status=item.status.phase,
-            restarts=restarts
+            restarts=restarts,
+            containers=containers
+        ))
+    return result
+
+def _handle_get_pod_images(entities: List[EntityModel]) -> list:
+    """
+    Handler for 'get_pod_images' intent. Returns list of PodImageModel.
+    """
+    params = _extract_parameters(entities, ["namespace"])
+    k8s = KubernetesClient()
+    api = k8s.get_core_v1_api()
+    try:
+        pod_list = api.list_namespaced_pod(namespace=params["namespace"])
+    except ApiException as e:
+        raise
+    result = []
+    for item in pod_list.items:
+        containers = []
+        if hasattr(item.spec, "containers") and item.spec.containers:
+            for container in item.spec.containers:
+                containers.append({
+                    "name": container.name,
+                    "image": container.image
+                })
+        result.append(PodImageModel(
+            name=item.metadata.name,
+            namespace=item.metadata.namespace,
+            containers=containers
         ))
     return result
 
 # Register handler in command map
-COMMAND_MAP["get_pod_status"] = _handle_get_pod_status 
+COMMAND_MAP["get_pod_status"] = _handle_get_pod_status
+COMMAND_MAP["get_pod_images"] = _handle_get_pod_images 
