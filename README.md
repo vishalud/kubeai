@@ -31,6 +31,14 @@ A Python project for natural language-driven Kubernetes operations.
    python -c "import pydantic; import kubernetes; import google.generativeai"
    ```
 
+## Demo
+
+See kubeai in action:
+
+![kubeai demo](docs/t-rec_1.gif)
+
+This demo shows the CLI responding to natural language Kubernetes queries, including listing pods and summarizing their status using Gemini-powered NLP.
+
 ## Notes
 - Ensure you are using Python 3.8 or newer.
 - The `.venv/` directory is excluded from version control via `.gitignore`. 
