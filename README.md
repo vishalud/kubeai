@@ -70,7 +70,7 @@ You can run the test suite using the provided Makefile.
   make coverage
   ```
 
-Test coverage is also uploaded to [Codecov](https://codecov.io/gh/<your-username>/<your-repo>) via GitHub Actions. The badge above will update automatically after each push to main.
+Test coverage is also uploaded to [Codecov](https://codecov.io/gh/vishalud/kubeai) via GitHub Actions. The badge above will update automatically after each push to main.
 
 ## Notes
 - Ensure you are using Python 3.8 or newer.
