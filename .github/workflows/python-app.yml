@@ -28,7 +28,9 @@ jobs:
     - name: Run tests with coverage
       run: |
         source .venv/bin/activate
-        pytest --cov=src tests
+        PYTHONPATH=. pytest --cov=src tests
 
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3 
+      uses: codecov/codecov-action@v3
+      with:
+        fail_ci_if_error: true 
