@@ -8,7 +8,7 @@ A Python project for natural language-driven Kubernetes operations.
 
 1. **Clone the repository and enter the project directory:**
    ```bash
-   git clone <repo-url>
+   git clone git@github.com:vishalud/kubeai.git
    cd kubeai
    ```
 
