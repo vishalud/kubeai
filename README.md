@@ -1,6 +1,6 @@
 # kubeai
 
-[![codecov](https://app.codecov.io/gh/vishalud/kubeai/branch/main/graph/badge.svg)](https://codecov.io/gh/vishalud/kubeai)
+[![codecov](https://codecov.io/gh/vishalud/kubeai/branch/main/graph/badge.svg)](https://codecov.io/gh/vishalud/kubeai)
 
 A Python project for natural language-driven Kubernetes operations.
 
