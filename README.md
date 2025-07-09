@@ -4,6 +4,11 @@
 
 A Python project for natural language-driven Kubernetes operations.
 
+## Documentation
+
+- [Architecture & Extensibility Guide](docs/architecture.md) – Learn about kubeai's modular design, data flow, and how to extend the CLI for new resource types, actions, and advanced NLP customization.
+- [NLP Customization Guide](docs/nlp_customization.md) – Advanced guide for extending or tuning the natural language/LLM layer, adding new intents/entities, and prompt engineering.
+
 ## Setup Instructions
 
 1. **Clone the repository and enter the project directory:**
