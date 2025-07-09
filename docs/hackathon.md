@@ -1,5 +1,7 @@
 # Hackathon 2025 Ideas:  Features for kubeai
 
+> **Note:** For maximum impact and inclusivity, make your documentation as verbose and detailed as possible. Clear, thorough docs enable remote and asynchronous team members to participate fully, understand your design and decisions, and contribute effectively—no matter their location or time zone.
+
 These are advanced, high-impact features for the kubeai project. Each is broken down into actionable subtasks, making them ideal for hackathon teams to tackle collaboratively.
 
 ---
@@ -42,7 +44,7 @@ kubeai: Pod 'coredns-1' uses image: k8s.gcr.io/coredns:1.8.0
 *Add safe, user-confirmed write operations (e.g., restarting a deployment) to kubeai.*
 
 **Main Task:**
-Introduce a controlled write operation (e.g., 'restart deployment') and implement a critical safety feature that requires explicit user confirmation before execution.
+Introduce a controlled write operation (e.g., 'restart deployment') and implement a safety feature that requires explicit user confirmation before execution.
 
 **Subtasks:**
 - **Add 'restart_deployment' intent to NLP model and command mapping**
