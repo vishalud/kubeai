@@ -15,13 +15,13 @@ The design emphasizes clear separation of concerns, robust validation, and ease 
 
 ```mermaid
 graph TD
-    A[User CLI Input] --> B[Gemini NLP (Intent Recognition)]
-    B --> C[IntentModel & Entities]
-    C --> D[Command Mapper]
-    D --> E[Kubernetes Client Handlers]
-    E --> F[Pydantic Resource Models]
-    F --> G[Gemini NLP (Response Generation)]
-    G --> H[User CLI Output]
+    A(User CLI Input) --> B(Gemini NLP: Intent Recognition)
+    B --> C(IntentModel & Entities)
+    C --> D(Command Mapper)
+    D --> E(Kubernetes Client Handlers)
+    E --> F(Pydantic Resource Models)
+    F --> G(Gemini NLP: Response Generation)
+    G --> H(User CLI Output)
 ```
 
 ### Component Breakdown
