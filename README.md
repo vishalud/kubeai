@@ -40,16 +40,24 @@ A Python project for natural language-driven Kubernetes operations.
 
 ## Demo
 
-See kubeai in action:
+Watch the latest kubeai demo:
 
-[![Watch the latest demo](docs/t-rec_2.mp4)](docs/t-rec_2.mp4)
+<p align="center">
+  <a href="https://youtu.be/4Wh4ZMD0HGc" target="_blank">
+    <img src="https://img.youtube.com/vi/4Wh4ZMD0HGc/0.jpg" alt="Watch the demo on YouTube" width="480"/>
+  </a>
+</p>
 
-<details>
-<summary>Click to play the demo video (MP4, 320KB)</summary>
+<p align="center">
+  <a href="https://youtu.be/4Wh4ZMD0HGc" target="_blank">▶️ Click here to watch the demo on YouTube</a>
+</p>
 
-<video src="docs/t-rec_2.mp4" controls width="600"></video>
+<!-- For platforms that support it, embed the video directly: -->
+<p align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/4Wh4ZMD0HGc" title="kubeai demo" frameborder="0" allowfullscreen></iframe>
+</p>
 
-</details>
+> Note: If you prefer, the previous MP4 demo is still available at [docs/t-rec_2.mp4](docs/t-rec_2.mp4).
 
 This demo shows the CLI responding to natural language Kubernetes queries, including listing pods and summarizing their status using Gemini-powered NLP.
 
