@@ -52,11 +52,6 @@ Watch the latest kubeai demo:
   <a href="https://youtu.be/BLZ2Xojs704" target="_blank">▶️ Click here to watch the demo on YouTube</a>
 </p>
 
-<!-- For platforms that support it, embed the video directly: -->
-<p align="center">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/BLZ2Xojs704" title="kubeai demo" frameborder="0" allowfullscreen></iframe>
-</p>
-
 > Note: If you prefer, the previous MP4 demo is still available at [docs/t-rec_2.mp4](docs/t-rec_2.mp4).
 
 This demo shows the CLI responding to natural language Kubernetes queries, including listing pods and summarizing their status using Gemini-powered NLP.
