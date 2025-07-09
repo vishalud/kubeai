@@ -1,6 +1,6 @@
 # Hackathon 2025 Ideas:  Features for kubeai
 
-> **Note:** For maximum impact and inclusivity, make your documentation as verbose and detailed as possible. Clear, thorough docs enable remote and asynchronous team members to participate fully, understand your design and decisions, and contribute effectively—no matter their location or time zone.
+> **Note:** For maximum impact and inclusivity, raise a PR with your ideas and be as verbose and detailed as possible. Clear, thorough docs enable remote and asynchronous team members to participate fully, understand your design and decisions, and contribute effectively—no matter their location or time zone.
 
 These are advanced, high-impact features for the kubeai project. Each is broken down into actionable subtasks, making them ideal for hackathon teams to tackle collaboratively.
 
