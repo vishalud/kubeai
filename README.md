@@ -43,18 +43,18 @@ A Python project for natural language-driven Kubernetes operations.
 Watch the latest kubeai demo:
 
 <p align="center">
-  <a href="https://youtu.be/4Wh4ZMD0HGc" target="_blank">
-    <img src="https://img.youtube.com/vi/4Wh4ZMD0HGc/0.jpg" alt="Watch the demo on YouTube" width="480"/>
+  <a href="https://youtu.be/BLZ2Xojs704" target="_blank">
+    <img src="https://img.youtube.com/vi/BLZ2Xojs704/0.jpg" alt="Watch the demo on YouTube" width="480"/>
   </a>
 </p>
 
 <p align="center">
-  <a href="https://youtu.be/4Wh4ZMD0HGc" target="_blank">▶️ Click here to watch the demo on YouTube</a>
+  <a href="https://youtu.be/BLZ2Xojs704" target="_blank">▶️ Click here to watch the demo on YouTube</a>
 </p>
 
 <!-- For platforms that support it, embed the video directly: -->
 <p align="center">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/4Wh4ZMD0HGc" title="kubeai demo" frameborder="0" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/BLZ2Xojs704" title="kubeai demo" frameborder="0" allowfullscreen></iframe>
 </p>
 
 > Note: If you prefer, the previous MP4 demo is still available at [docs/t-rec_2.mp4](docs/t-rec_2.mp4).
